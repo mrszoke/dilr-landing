@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: radial-gradient(circle at top left, #ffe4ec, transparent 40%),
+              radial-gradient(circle at bottom right, #dbeafe, transparent 40%),
+              #f8f9ff;
+  color: #0f172a;
+}
+
+.header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.logo img {
+  height: 100px;
+  width: auto;
+  display: block;
+}
+
+
+nav a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #64748b;
+}
+
+.cta-small {
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff8a5c, #7c7cff);
+  color: white;
+}
+
+.hero {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.hero-left h1 {
+  font-size: 56px;
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 22px;
+  color: #64748b;
+}
+
+.description {
+  font-size: 18px;
+  max-width: 520px;
+}
+
+.tagline {
+  display: block;
+  margin-top: 16px;
+}
+
+.cta-main {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 16px 36px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff8a5c, #7c7cff);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.phone-placeholder {
+  width: 100%;
+  max-width: 380px;
+  height: 600px;
+  border-radius: 32px;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+}
+.phone-mockup {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow:
+    0 40px 80px rgba(0,0,0,0.25);
+}
+
+.phone-mockup img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.phone-mockup {
+  transition: transform 0.4s ease;
+}
+
+.phone-mockup:hover {
+  transform: translateY(-6px);
+}
+
+@media (max-width: 768px) {
+
+  .header {
+    padding: 20px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    margin: 48px auto;
+  }
+
+  .hero-left h1 {
+    font-size: 38px;
+    line-height: 1.15;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .cta-main {
+    width: 100%;
+    text-align: center;
+  }
+
+
+  .hero-right {
+    display: flex;
+    justify-content: center;
+  }
+
+  .phone-mockup {
+    max-width: 300px;
+  }
+
+}
+
