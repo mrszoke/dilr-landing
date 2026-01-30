@@ -124,9 +124,9 @@ nav a {
     padding: 20px;
   }
 
-  //nav {
+  nav {
     display: none;
-  }//
+  }
 
   .hero {
     grid-template-columns: 1fr;
