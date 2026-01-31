@@ -1,49 +1,67 @@
-# Starlight Starter Kit: Basics
+# Dìlr – Personalized Deals & Local Offers
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+**Dìlr** is an early-stage platform concept that delivers
+personalized deals and offers based on user interests,
+lifestyle, and real-time location.
 
-```
-npm create astro@latest -- --template starlight
-```
+🔗 **Live landing page:** https://dilr.app
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-## 🚀 Project Structure
+## Why Dìlr?
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+Most deal apps and newsletters:
+- send irrelevant offers,
+- require a separate app for every store,
+- ignore where the user actually is.
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
+Dìlr aims to solve this with a **single, clean feed**
+that only shows offers users actually care about.
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+---
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+## Core Concept
 
-Static assets, like favicons, can be placed in the `public/` directory.
+- 🎯 Personalized deals based on interests and habits  
+- 📍 Local offers from nearby cafés, shops, and restaurants  
+- 🔔 Location-based notifications for nearby discounts  
+- 📱 One app instead of dozens of separate store apps  
 
-## 🧞 Commands
+---
 
-All commands are run from the root of the project, from a terminal:
+## Tech Stack
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- **Astro** – static site generation  
+- **CSS** – custom responsive styling  
+- **Netlify** – hosting and deployment  
+- **GitHub** – version control  
 
-## 👀 Want to learn more?
+---
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+## Project Status
+
+🚧 **Early-stage / validation phase**
+
+Current focus:
+- validating user interest
+- gathering early adopters
+- reaching out to local businesses
+
+This repository currently contains the **landing page**
+used for concept validation.
+
+---
+
+## Roadmap
+
+- [ ] Early access email collection  
+- [ ] Feature section expansion  
+- [ ] MVP mobile app planning  
+- [ ] Business partnerships & onboarding  
+
+---
+
+## Contact
+
+📧 hello@dilr.app  
+🌐 https://dilr.app
