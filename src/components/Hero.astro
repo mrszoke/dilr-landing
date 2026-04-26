@@ -102,29 +102,29 @@ Nincs reklám. Nincs spam. Csak relevancia.
 </section>
 
 <script>
+  document.addEventListener('DOMContentLoaded', () => {
 
-  const form = document.getElementById('notify-form');
+    const form = document.getElementById('notify-form');
+    const success = document.getElementById('success');
 
-  const success = document.getElementById('success');
+    console.log("FORM:", form);
 
-  form.addEventListener('submit', async (e) => {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
 
-    e.preventDefault();
+      const email = form.email.value;
 
-    const email = form.email.value;
+      await fetch('/api/notify', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
 
-await fetch('/api/notify', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({ email }),
-});
-
-    form.reset();
-
-    success.classList.remove('hidden');
+      form.reset();
+      success.classList.remove('hidden');
+    });
 
   });
-
 </script>
