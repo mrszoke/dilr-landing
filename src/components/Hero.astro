@@ -113,13 +113,13 @@ Nincs reklám. Nincs spam. Csak relevancia.
 
     const email = form.email.value;
 
-    await fetch('/api/notify', {
-
-      method: 'POST',
-
-      body: JSON.stringify({ email }),
-
-    });
+await fetch('/api/notify', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ email }),
+});
 
     form.reset();
 
