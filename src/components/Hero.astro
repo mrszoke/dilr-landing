@@ -16,7 +16,27 @@ az érdeklődésed és a tartózkodási helyed alapján.
 Nincs reklám. Nincs spam. Csak relevancia.
 </strong>
 
-<form id="notify-form" class="flex gap-2">
+<form id="notify-form" class="flex flex-col items-center gap-3 mt-6">
+
+  
+
+  <!-- HEADLINE -->
+
+  <p class="text-lg font-semibold text-center">
+
+    Legyél az elsők között
+
+  </p>
+
+  <!-- SUBTEXT -->
+
+  <p class="text-sm text-gray-500 text-center max-w-md">
+
+    Az elsők között férsz hozzá Budapest legjobb ajánlataihoz.
+
+  </p>
+
+  <!-- INPUT -->
 
   <input 
 
@@ -28,19 +48,37 @@ Nincs reklám. Nincs spam. Csak relevancia.
 
     required
 
-    class="px-4 py-2 rounded-xl border"
+    class="w-full max-w-sm px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
 
   />
 
-  <button type="submit" class="px-5 py-2 rounded-xl bg-purple-600 text-white">
+  <!-- BUTTON -->
 
-    Érdekel
+  <button 
+
+    type="submit"
+
+    class="px-6 py-3 rounded-xl bg-purple-600 text-white font-medium hover:bg-purple-700 transition"
+
+  >
+
+    Érdekel – szóljatok induláskor
 
   </button>
 
+  <!-- TRUST -->
+
+  <p class="text-xs text-gray-400">
+
+    Nem küldünk spamet.
+
+  </p>
+
 </form>
 
-<p id="success" class="hidden mt-2 text-green-600">
+<!-- SUCCESS MESSAGE -->
+
+<p id="success" class="hidden mt-4 text-green-600 font-medium">
 
   Köszi! Szólunk, amint indulunk 🚀
 
@@ -62,3 +100,31 @@ Nincs reklám. Nincs spam. Csak relevancia.
   </div>
 </div>
 </section>
+
+<script>
+
+  const form = document.getElementById('notify-form');
+
+  const success = document.getElementById('success');
+
+  form.addEventListener('submit', async (e) => {
+
+    e.preventDefault();
+
+    const email = form.email.value;
+
+    await fetch('/api/notify', {
+
+      method: 'POST',
+
+      body: JSON.stringify({ email }),
+
+    });
+
+    form.reset();
+
+    success.classList.remove('hidden');
+
+  });
+
+</script>
