@@ -2,7 +2,6 @@ import type { APIRoute } from 'astro';
 import { Resend } from 'resend';
 
 // 🚨 kötelező Astro-ban API-hoz
-export const prerender = false;
 
 // 🔑 Resend init
 const resend = new Resend(import.meta.env.RESEND_API_KEY);
