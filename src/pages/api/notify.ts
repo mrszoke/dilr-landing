@@ -22,13 +22,6 @@ export const POST: APIRoute = async ({ request }) => {
     // 🧹 email tisztítás
     const cleanEmail = email.trim().toLowerCase();
 
-    // ❌ alap validáció
-    if (!cleanEmail.includes('@')) {
-      return new Response(JSON.stringify({ error: 'Érvénytelen email' }), {
-        status: 400,
-      });
-    }
-
     console.log("📩 EMAIL:", cleanEmail);
 
     // 📧 email küldés
